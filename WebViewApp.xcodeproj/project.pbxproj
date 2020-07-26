@@ -16,6 +16,7 @@
 		B7D3B98224CBED95006DB4C0 /* WebViewAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D3B98124CBED95006DB4C0 /* WebViewAppTests.swift */; };
 		B7D3B98D24CBED95006DB4C0 /* WebViewAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D3B98C24CBED95006DB4C0 /* WebViewAppUITests.swift */; };
 		B7D3B99C24CBF1E1006DB4C0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D3B99B24CBF1E1006DB4C0 /* WebKit.framework */; };
+		B7D3B9A224CDA5F4006DB4C0 /* htmlWebview.html in Resources */ = {isa = PBXBuildFile; fileRef = B7D3B9A124CDA5F4006DB4C0 /* htmlWebview.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		B7D3B99D24CBF643006DB4C0 /* WebViewApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebViewApp.entitlements; sourceTree = "<group>"; };
 		B7D3B99E24CBF643006DB4C0 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		B7D3B9A024CBFE48006DB4C0 /* WebViewAppRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebViewAppRelease.entitlements; sourceTree = "<group>"; };
+		B7D3B9A124CDA5F4006DB4C0 /* htmlWebview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = htmlWebview.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				B7D3B97324CBED95006DB4C0 /* Assets.xcassets */,
 				B7D3B97524CBED95006DB4C0 /* LaunchScreen.storyboard */,
 				B7D3B97824CBED95006DB4C0 /* Info.plist */,
+				B7D3B9A124CDA5F4006DB4C0 /* htmlWebview.html */,
 			);
 			path = WebViewApp;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7D3B97724CBED95006DB4C0 /* LaunchScreen.storyboard in Resources */,
+				B7D3B9A224CDA5F4006DB4C0 /* htmlWebview.html in Resources */,
 				B7D3B97424CBED95006DB4C0 /* Assets.xcassets in Resources */,
 				B7D3B97224CBED92006DB4C0 /* Main.storyboard in Resources */,
 			);
