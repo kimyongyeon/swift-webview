@@ -19,7 +19,7 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, WKSc
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         myWebView.uiDelegate = self // indicator 를 위해서 설정 했지만 안된다. 역시 책데로 따라 해야 한단 말인가?
-        initWebView()
+//        initWebView()
         loadWebPage("http://www.naver.com")
     }
     
@@ -64,20 +64,36 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, WKSc
     @IBAction func btnGotoUrl(_ sender: UIButton) {
     }
     @IBAction func btnGoFile(_ sender: UIButton) {
+        print("file load")
+        let myHtmlBundle = Bundle.main
+        let filePath = myHtmlBundle.path(forResource: "htmlWebview", ofType: "html")
+        loadWebPage(filePath!)
     }
     @IBAction func btnGoHtml(_ sender: UIButton) {
+        let htmlString = """
+            <h1> HTML String </h1> <p> String 변수를 이용한 웹페이지 </p>
+            <p> <a href="http://2sam.net/">2sam</a>으로 이동 </p>
+        """
+        myWebView.loadHTMLString(htmlString, baseURL: nil)
     }
     @IBAction func btnGoSite2(_ sender: UIButton) {
+        loadWebPage("http://blog.2sam.net")
     }
     @IBAction func btnGoSite1(_ sender: UIButton) {
+        loadWebPage("http://fallinmac.tistory.com")
     }
     @IBAction func btnGoForward(_ sender: UIBarButtonItem) {
+        myWebView.goForward()
     }
     @IBAction func btnGoBack(_ sender: UIBarButtonItem) {
+        myWebView.goBack()
     }
     @IBAction func btnReload(_ sender: UIBarButtonItem) {
+        myWebView.reload()
     }
     @IBAction func btnStop(_ sender: UIBarButtonItem) {
+        myWebView.stopLoading()
     }
+    
 }
 
