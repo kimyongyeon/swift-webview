@@ -18,7 +18,8 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, WKSc
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        initWebView()
+        myWebView.uiDelegate = self // indicator 를 위해서 설정 했지만 안된다. 역시 책데로 따라 해야 한단 말인가?
+        initWebView()
         loadWebPage("http://www.naver.com")
     }
     
@@ -30,6 +31,10 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, WKSc
             let data = message.body
             print(data as! String)
         }
+    }
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        myActivityIndicator.stopAnimating()
     }
     
     func initWebView() {
