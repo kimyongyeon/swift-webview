@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,129 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebViewApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aaS-TV-NFe">
+                                <rect key="frame" x="16" y="20" width="259" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIG-e0-PUE">
+                                <rect key="frame" x="309" y="20" width="30" height="30"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="btnGotoUrl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2L0-CM-73K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gs-72-uH3">
+                                <rect key="frame" x="23" y="71" width="33" height="30"/>
+                                <state key="normal" title="Site1"/>
+                                <connections>
+                                    <action selector="btnGoSite1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SoX-b9-St2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41u-lC-EVe">
+                                <rect key="frame" x="88" y="71" width="36" height="30"/>
+                                <state key="normal" title="Site2"/>
+                                <connections>
+                                    <action selector="btnGoSite2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="81o-kZ-Psn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rf-zi-ggf">
+                                <rect key="frame" x="165" y="71" width="31" height="30"/>
+                                <state key="normal" title="html"/>
+                                <connections>
+                                    <action selector="btnGoHtml:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mI7-pn-fTO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5In-Fm-8nD">
+                                <rect key="frame" x="237" y="71" width="30" height="30"/>
+                                <state key="normal" title="File"/>
+                                <connections>
+                                    <action selector="btnGoFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pma-6V-MC2"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhg-B5-3D6">
+                                <rect key="frame" x="0.0" y="109" width="375" height="514"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xmJ-K9-2tU">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Stop" id="Lkc-1u-JSk">
+                                        <connections>
+                                            <action selector="btnStop:" destination="BYZ-38-t0r" id="yIR-tc-ivt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iQ2-WJ-BaH"/>
+                                    <barButtonItem title="새로고침" id="ozA-Vm-maL">
+                                        <connections>
+                                            <action selector="btnReload:" destination="BYZ-38-t0r" id="Cxm-8x-tEA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="되감기" id="la0-N8-3Qd">
+                                        <connections>
+                                            <action selector="btnGoBack:" destination="BYZ-38-t0r" id="KyQ-kp-I4w"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="앞으로감기" id="s0A-sL-hIC">
+                                        <connections>
+                                            <action selector="btnGoForward:" destination="BYZ-38-t0r" id="Kn9-Kz-Tlq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="VNo-02-7Ga">
+                                <rect key="frame" x="122" y="346" width="143" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rhg-B5-3D6" firstAttribute="top" secondItem="41u-lC-EVe" secondAttribute="bottom" constant="8" id="3X6-Up-ArD"/>
+                            <constraint firstItem="rhg-B5-3D6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5bY-ak-4iz"/>
+                            <constraint firstItem="2gs-72-uH3" firstAttribute="top" secondItem="aaS-TV-NFe" secondAttribute="bottom" constant="17" id="5jA-wr-ziV"/>
+                            <constraint firstItem="xmJ-K9-2tU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AFl-SL-09e"/>
+                            <constraint firstItem="5In-Fm-8nD" firstAttribute="leading" secondItem="2rf-zi-ggf" secondAttribute="trailing" constant="41" id="BIt-E7-HT5"/>
+                            <constraint firstItem="5In-Fm-8nD" firstAttribute="top" secondItem="aaS-TV-NFe" secondAttribute="bottom" constant="17" id="ByI-EX-atx"/>
+                            <constraint firstItem="xmJ-K9-2tU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CTq-LD-kkh"/>
+                            <constraint firstItem="JIG-e0-PUE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="LqD-b8-MTH"/>
+                            <constraint firstItem="JIG-e0-PUE" firstAttribute="leading" secondItem="aaS-TV-NFe" secondAttribute="trailing" constant="34" id="MfP-f2-lJF"/>
+                            <constraint firstItem="2gs-72-uH3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="MtO-Lw-dvJ"/>
+                            <constraint firstItem="rhg-B5-3D6" firstAttribute="top" secondItem="2gs-72-uH3" secondAttribute="bottom" constant="8" id="NQl-NB-JJ9"/>
+                            <constraint firstItem="2rf-zi-ggf" firstAttribute="leading" secondItem="41u-lC-EVe" secondAttribute="trailing" constant="41" id="Trr-L6-LSh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JIG-e0-PUE" secondAttribute="trailing" constant="36" id="Xgn-9S-Kyd"/>
+                            <constraint firstItem="xmJ-K9-2tU" firstAttribute="top" secondItem="rhg-B5-3D6" secondAttribute="bottom" id="ZNr-qf-Lhs"/>
+                            <constraint firstItem="41u-lC-EVe" firstAttribute="top" secondItem="aaS-TV-NFe" secondAttribute="bottom" constant="17" id="aBm-lJ-l3k"/>
+                            <constraint firstItem="aaS-TV-NFe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="dYK-R5-gH1"/>
+                            <constraint firstItem="aaS-TV-NFe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="djW-Iy-IFd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5In-Fm-8nD" secondAttribute="trailing" constant="108" id="eR3-42-p4F"/>
+                            <constraint firstItem="xmJ-K9-2tU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="h1F-GI-Rrb"/>
+                            <constraint firstItem="2rf-zi-ggf" firstAttribute="top" secondItem="aaS-TV-NFe" secondAttribute="bottom" constant="17" id="h2r-kD-FtM"/>
+                            <constraint firstItem="rhg-B5-3D6" firstAttribute="top" secondItem="JIG-e0-PUE" secondAttribute="bottom" constant="59" id="hnI-qu-SC1"/>
+                            <constraint firstItem="rhg-B5-3D6" firstAttribute="top" secondItem="5In-Fm-8nD" secondAttribute="bottom" constant="8" id="hxo-lK-RLy"/>
+                            <constraint firstItem="rhg-B5-3D6" firstAttribute="top" secondItem="2rf-zi-ggf" secondAttribute="bottom" constant="8" id="i7h-Xg-dTh"/>
+                            <constraint firstItem="rhg-B5-3D6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ruZ-TQ-kxL"/>
+                            <constraint firstItem="41u-lC-EVe" firstAttribute="leading" secondItem="2gs-72-uH3" secondAttribute="trailing" constant="32" id="v5Q-bd-owO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="myActivityIndicator" destination="VNo-02-7Ga" id="Aas-Gn-vFb"/>
+                        <outlet property="myWebView" destination="rhg-B5-3D6" id="4mT-rv-Jss"/>
+                        <outlet property="txtUrl" destination="aaS-TV-NFe" id="YnB-Y8-ywG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-58.399999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
